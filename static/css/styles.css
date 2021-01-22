@@ -1,0 +1,126 @@
+:root {
+  --main-color: #33691e;
+  --text-color-header: #adc3a5;
+  --font-family-header: "Roboto";
+  --font-family-general: "Helvetica";
+  --burquer-menu-color: #8bc34a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header__nav {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 13px 46px 13px 45px;
+  position: relative;
+}
+.header__nav::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 460px;
+  height: 145px;
+  left: 50%;
+  z-index: 2;
+  bottom: -145px;
+  transform: translate(-50%);
+  background: var(--main-color) url("../images/logo_udea_white.svg") no-repeat;
+  background-position: 50%;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 1px 2px black;
+}
+
+.header__list {
+  display: flex;
+  gap: 35px;
+}
+.header__list-item {
+  list-style: none;
+}
+.header__list-item > a {
+  color: var(--text-color-header);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--font-family-header);
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+  padding: 15px 30px 15px 0px;
+}
+
+.header__bottom > p {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: var(--font-family-general);
+  font-weight: bold;
+}
+
+.sign-in {
+  font-family: var(--font-family-general);
+  background-color: #ffc107;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 200px;
+  height: 53px;
+  color: #fafafa;
+  box-shadow: 0px 1px 4px rgb(109, 109, 109);
+}
+.burguer {
+  width: 23px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.burguer__line {
+  height: 2px;
+  width: 65%;
+  background-color: var(--burquer-menu-color);
+}
+
+.burguer__line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #8bc34a;
+  top: 8px;
+}
+
+.burguer__line::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  display: block;
+  background-color: #8bc34a;
+  top: 19px;
+}
